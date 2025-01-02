@@ -8,11 +8,13 @@ from groq import Groq
 import chromadb
 import ollama
 from contextlib import contextmanager
+from logging.handlers import RotatingFileHandler
+
 
 # Setup logging with rotation
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger()
-handler = logging.handlers.RotatingFileHandler('ai_client.log', maxBytes=10485760, backupCount=5)
+handler = RotatingFileHandler('ai_client.log', maxBytes=10485760, backupCount=5)
 handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
 logger.addHandler(handler)
 
