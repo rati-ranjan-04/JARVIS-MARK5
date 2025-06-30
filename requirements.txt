@@ -24,6 +24,7 @@ pywin32
 pyautogui
 beautifulsoup4
 pyperclip
+python-pptx
 g4f
 flask
 jinja2
